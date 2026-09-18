@@ -204,7 +204,7 @@
      ヒーロー一覧の読み込み（./text/heroes.txt）
   ========================================================= */
   let heroList = [];
-
+ 
   function buildBgHeroAccordion() {
     const options = [{ value: '', label: 'なし' }, ...heroList.map(h => ({ value: h, label: h }))];
     const acc = createAccordion({
@@ -220,7 +220,7 @@
     mount.replaceWith(acc);
     acc.id = 'acc-bg-hero';
   }
-
+ 
   function buildHeroPoolAccordion() {
     const options = heroList.map(h => ({ value: h, label: h }));
     const acc = createAccordion({
@@ -237,13 +237,19 @@
     mount.replaceWith(acc);
     acc.id = 'acc-hero-pool';
   }
-
+ 
   fetch('./text/heroes.txt')
-    .then(r => r.text())
+    .then(r => {
+      if (!r.ok) throw new Error('heroes.txt not found (status ' + r.status + ')');
+      return r.text();
+    })
     .then(txt => {
       heroList = txt.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
     })
-    .catch(() => { heroList = []; })
+    .catch((err) => {
+      console.warn('ヒーロー一覧の読み込みに失敗しました:', err);
+      heroList = [];
+    })
     .finally(() => {
       buildBgHeroAccordion();
       buildHeroPoolAccordion();
