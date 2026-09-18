@@ -201,7 +201,7 @@
   });
 
   /* =========================================================
-     ヒーロー一覧の読み込み（/text/heroes.txt）
+     ヒーロー一覧の読み込み（./text/heroes.txt）
   ========================================================= */
   let heroList = [];
 
@@ -238,7 +238,7 @@
     acc.id = 'acc-hero-pool';
   }
 
-  fetch('/text/heroes.txt')
+  fetch('./text/heroes.txt')
     .then(r => r.text())
     .then(txt => {
       heroList = txt.split(/\r?\n/).map(s => s.trim()).filter(Boolean);
