@@ -1,0 +1,511 @@
+/* ============================================================
+   フォーム部品として使っているclass一覧（メモ）
+   .form-input      … text / textarea 入力欄
+   .form-checkbox   … checkbox / radio（アコーディオン内の選択肢も含む）
+   .form-btn        … 追加・削除・出力ボタン
+   .accordion-select … アコーディオン式セレクトの外枠
+   .accordion-toggle … アコーディオン開閉ボタン
+   .accordion-panel  … アコーディオンの選択肢パネル
+   .accordion-option … アコーディオン内の1選択肢（label + checkbox/radio）
+   ============================================================ */
+
+:root {
+    --background: #f1f4fa;
+    --black:rgb(72, 72, 92);
+    --main-text: rgb(10, 10, 30);
+    --main-text-2: rgb(10, 10, 70, 0.7);
+    --sub-text: rgb(10, 10, 70, 0.5);
+    --item-bg: #d9dce8;
+    --item-shadow: rgb(10, 10, 70, 0.3);
+    --accent:#4e6fff;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 24px;
+    box-sizing: border-box;
+    width: 1800px;
+    background: var(--background);
+    background-image: url(./img/tracer.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto 101%;
+    padding: 48px;
+}
+
+.card-info {
+    z-index: 2;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+}
+.card-info-1 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 42px;
+}
+.code {
+    font-family: "Google Sans", sans-serif;
+    font-size: 32px;
+    letter-spacing: -4.5px;
+    padding-left: 16px;
+}
+.card-info-2 {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 24px;
+}
+.revati-logo {
+    width: 80px;
+    height: 80px;
+    margin-left: 12px;
+}
+
+.heading {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--accent);
+    margin-top: 20px;
+    padding-left: 10px;
+    border-left: 10px solid var(--accent);
+}
+
+.sub-heading {
+    font-family: "IBM Plex Mono", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--sub-text);
+    margin-left: -24px;
+    margin-bottom: 4px;
+}
+
+
+.prof-el {
+    display: inline-block;
+    font-family: "Google Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-left: 40px;
+    margin-right: 12px;
+}
+
+/* player-name */
+.sec-player-profile {
+    z-index: 2;
+}
+
+.player-name {
+    font-family: "Google Sans", sans-serif;
+    font-weight: 600;
+    font-size: 130px;
+    letter-spacing: -0.3rem;
+    margin-left: 16px;
+    margin-bottom: 24px;
+}
+
+/* result-table */
+.sec-results {
+    z-index: 2;
+}
+
+.results-table-box{
+    background: var(--item-bg);
+    width: max-content;
+    padding: 12px;
+    margin-left: 16px;
+    margin-top: 16px;
+    box-shadow: 4px 4px var(--item-shadow);
+}
+
+
+.results-table {
+    border-collapse: collapse;
+    width: max-content;
+    background: var(--item-bg);
+    font-family: "Google Sans", "LINE Seed JP", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.results-table td {
+    padding: 4px 8px;
+    white-space: nowrap;
+}
+
+.results-table .date {
+    color: var(--main-text-2);
+    width: 72px;
+}
+
+.results-table .divider {
+    color: var(--sub-text);
+    padding: 0 4px;
+    width: 10px;
+}
+
+.results-table .title {
+    color: var(--main-text-2);
+    padding-left: 4px;
+}
+
+.results-table .rank {
+    color: var(--background);
+    font-weight: 500;
+    text-align: center;
+    border: 4px solid var(--item-bg);
+    width: auto;
+}
+
+.rank-1st { background: #c89e15; }
+.rank-2nd { background: #495c8c; }
+.rank-3rd { background: #4b1010; }
+.rank-other { color: var(--main-text-2) !important; background: var(--item-bg); }
+
+/* self-introduction */
+.sec-self-introduction {
+    z-index: 2;
+}
+
+.self-introduction {
+    font-family: "LINE Seed JP", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.05rem;
+    width: 45%;
+    margin-left: 16px;
+    margin-top: 16px;
+    white-space: pre-wrap;
+}
+
+/* mini-interview */
+.sec-mini-interview {
+    z-index: 2;
+}
+
+.mini-interview {
+    font-family: "LINE Seed JP", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    width: 45%;
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+.Q {
+    font-family: "Google Sans", sans-serif;
+    font-weight: 600;
+}
+
+.q-text{
+    margin-top: 20px;
+}
+
+.a-text{
+    margin-left: 12px;
+    padding: 6px 16px;
+    background: var(--item-bg);
+    color: var(--main-text-2);
+    width: max-content;
+    margin-top: 4px;
+    box-shadow: 4px 4px var(--item-shadow);
+}
+
+/* What is the player like? */
+.sec-wtpl {
+    z-index: 2;
+}
+
+.wtpl {
+    font-family: "LINE Seed JP", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    width: 70%;
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+.wtpl-card-wrapper {
+    display: flex;
+    align-items: start;
+    padding-top: 12px;
+}
+
+.wtpl-profile-sticker {
+    position: relative;
+    width: 140px;
+}
+
+.sticker-avatar {
+    width: 120px;
+    height: 120px;
+    box-shadow: 4px 4px var(--item-shadow);
+    object-fit: cover;
+}
+
+.wtpl-speech-bubble {
+    margin-left: 24px;
+    position: relative;
+    background: var(--item-bg);
+    padding: 16px 24px 16px 24px;
+    box-shadow: 4px 4px var(--item-shadow);
+}
+
+.wtpl-speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 30%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-right: 20px solid var(--item-bg);
+}
+
+.wtpl-comment {
+    font-family: "LINE Seed JP", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.05rem;
+    color: var(--main-text-2);
+    white-space: pre-wrap;
+}
+
+.wtpl-tag {
+    position: absolute;
+    right: 20px;
+    bottom: -16px;
+    background: var(--main-text);
+    color: var(--background);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 4px 10px;
+    white-space: nowrap;
+}
+
+.wtpl-tag .tag-sub {
+    font-size: 14px;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+
+/* form */
+
+* { box-sizing: border-box; }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: #ececec;
+    color: #222;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+/* フォーム側 */
+.form-pane {
+    width: 380px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    padding: 16px;
+    background: #fafafa;
+    border-right: 1px solid #ccc;
+}
+
+.form-title {
+    font-size: 18px;
+    margin: 4px 0 16px;
+}
+
+.form-section {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    padding: 10px 12px 14px;
+}
+
+.form-section legend {
+    padding: 0 6px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #444;
+}
+
+.legend-with-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-toggle-label {
+    font-weight: normal;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.field-label {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.checkbox-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.field-mount {
+    font-size: 13px;
+    color: #888;
+}
+
+.form-input {
+    width: 100%;
+    font: inherit;
+}
+
+textarea.form-input {
+    resize: vertical;
+}
+
+.form-btn {
+    margin-top: 8px;
+}
+
+.form-btn-primary {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.repeat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.repeat-item {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    background: #fff;
+}
+
+.repeat-item .field-label {
+    margin-top: 6px;
+}
+
+.repeat-item .field-label:first-child {
+    margin-top: 0;
+}
+
+.remove-btn {
+    margin-top: 10px;
+}
+
+.result-row-grid {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+/* アコーディオン式セレクト */
+.accordion-select {
+    position: relative;
+}
+
+.accordion-toggle {
+    width: 100%;
+    text-align: left;
+    padding: 6px 8px;
+    background: #fff;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font: inherit;
+    cursor: pointer;
+}
+
+.accordion-panel {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 50;
+    max-height: 220px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #999;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    padding: 4px 0;
+}
+
+.accordion-select.open .accordion-panel {
+    display: block;
+}
+
+.accordion-option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 8px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.accordion-option:hover {
+    background: #f0f0f0;
+}
+
+.accordion-option input:disabled {
+    cursor: not-allowed;
+}
+
+.inline-accordions {
+    display: flex;
+    gap: 6px;
+}
+
+.inline-accordions .accordion-select {
+    flex: 1;
+}
+
+/* プレビュー側 */
+.preview-pane {
+    flex: 1;
+    overflow: auto;
+    background: #141414;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+.preview-scale-wrapper {
+    overflow: hidden;
+}
+
+.preview-scale-inner {
+    transform-origin: top left;
+}
