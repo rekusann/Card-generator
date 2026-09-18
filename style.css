@@ -1,13 +1,12 @@
-/* ============================================================
-   フォーム部品として使っているclass一覧（メモ）
-   .form-input      … text / textarea 入力欄
-   .form-checkbox   … checkbox / radio（アコーディオン内の選択肢も含む）
-   .form-btn        … 追加・削除・出力ボタン
-   .accordion-select … アコーディオン式セレクトの外枠
-   .accordion-toggle … アコーディオン開閉ボタン
-   .accordion-panel  … アコーディオンの選択肢パネル
-   .accordion-option … アコーディオン内の1選択肢（label + checkbox/radio）
-   ============================================================ */
+/*
+.form-input … text / textarea 入力欄
+.form-checkbox … checkbox / radio（アコーディオン内の選択肢も含む）
+.form-btn … 追加・削除・出力ボタン
+.accordion-select … アコーディオン式セレクトの外枠
+.accordion-toggle … アコーディオン開閉ボタン
+.accordion-panel … アコーディオンの選択肢パネル
+.accordion-option … アコーディオン内の選択肢
+*/
 
 :root {
     --background: #f1f4fa;
