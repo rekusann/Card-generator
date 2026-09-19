@@ -1,6 +1,6 @@
 <TANK>
-D.mon
-D.va
+D.Mon
+D.Va
 Domina
 Doomfist
 Hazard
